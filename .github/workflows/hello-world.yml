@@ -1,0 +1,9 @@
+name: hello-world # name of workflow
+on: push # event
+jobs: 
+  hello-world-job: # first job name
+    runs-on: ubuntu-latest # runner -> VM running an OS
+    steps:
+      - name: Check out repository code # step name
+        uses: actions/checkout@v3 # an action
+      - run: echo "$(cat hello_world.txt)" # another step
